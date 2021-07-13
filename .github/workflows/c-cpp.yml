@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build
-      run: gcc ERC.c -o ERS.exe
+      run: gcc ERC.c -o ERS
     - name: Run
       run: .\ERS.c
