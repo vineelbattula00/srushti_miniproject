@@ -3,9 +3,9 @@ name: Windows C/C++ CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build
-      run: gcc ERC.c -o ERS
+      run: gcc ERS.c -o ERS
     - name: Run
       run: .\ERS.c
