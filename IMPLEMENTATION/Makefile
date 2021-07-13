@@ -1,4 +1,4 @@
-TEST_PROJ_NAME = Employee Record System
+TEST_PROJ_NAME = employee_record_system
 BUILD_DIR = Build
 
 SRC = main.c\
