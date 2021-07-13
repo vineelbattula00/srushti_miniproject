@@ -1,5 +1,4 @@
-  
-name: Windows C/C++ CI
+name: C/C++ Build
 
 on:
   push:
@@ -14,7 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: build
-      run: gcc ERS.c -o ERS.exe
-    - name: Run
-      run: .\ERS.exe
+    - name: make
+      run: make -C IMPLEMENTATION/ all
