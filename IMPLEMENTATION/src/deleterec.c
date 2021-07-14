@@ -1,4 +1,5 @@
 #include"fun.h"
+#include<stdio.h>
 void deleterec()
 {
     char stname[20];

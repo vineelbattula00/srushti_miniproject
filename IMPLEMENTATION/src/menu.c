@@ -1,3 +1,4 @@
+#include "fun.h"
 void menu()
 {
     int choice;
