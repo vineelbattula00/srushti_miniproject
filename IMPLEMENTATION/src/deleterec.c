@@ -5,21 +5,21 @@ void deleterec()
     FILE *fp,*ft;
     struct employee std;
     system("cls");
-    gotoxy(10,3);
+    
     printf("<--:DELETE RECORD:-->");
-    gotoxy(10,5);
+    
     printf("Enter name of employee to delete record : ");
     fflush(stdin);
-    gets(stname);
+    scanf("%s",stname);
     fp = fopen("record.txt","rb+");
     if(fp == NULL){
-        gotoxy(10,6);
+        
         printf("Error opening file");
         exit(1);
     }
     ft = fopen("temp.txt","wb+");
     if(ft == NULL){
-        gotoxy(10,6);
+        
         printf("Error opening file");
         exit(1);
     }
@@ -31,8 +31,9 @@ void deleterec()
     fclose(ft);
     remove("record.txt");
     rename("temp.txt","record.txt");
-    gotoxy(10,10);
+    char b,c;
+    scanf("%c",&c);
     printf("Press any key to continue.");
-    getch();
+    scanf("%c",&b);
     menu();
 }

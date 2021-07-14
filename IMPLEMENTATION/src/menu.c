@@ -1,25 +1,24 @@
-#include"fun.h"
 void menu()
 {
     int choice;
     system("cls");
-    gotoxy(10,3);
+    
     printf("<--:MENU:-->");
-    gotoxy(10,5);
+    
     printf("Enter appropriate number to perform following task.");
-    gotoxy(10,7);
+   
     printf("1 : Add Record.");
-    gotoxy(10,8);
+    
     printf("2 : View Record.");
-    gotoxy(10,9);
+    
     printf("3 : Search Record.");
-    gotoxy(10,10);
+   
     printf("4 : Modify Record.");
-    gotoxy(10,11);
+    
     printf("5 : Delete.");
-    gotoxy(10,12);
+   
     printf("6 : Exit.");
-    gotoxy(10,15);
+    
     printf("Enter your choice.");
     scanf("%d",&choice);
     switch(choice)
@@ -49,7 +48,7 @@ void menu()
         break;
 
     default:
-        gotoxy(10,17);
+        
         printf("Invalid Choice.");
     }
 }

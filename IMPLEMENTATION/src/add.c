@@ -8,50 +8,53 @@ void add()
 
     fp = fopen("record.txt","ab+");
     if(fp == NULL){
-        gotoxy(10,5);
+        
         printf("Error opening file");
         exit(1);
     }
     fflush(stdin);
     while(another == 'y')
     {
-        gotoxy(10,3);
+        
         printf("<--:ADD RECORD:-->");
-        gotoxy(10,5);
+        
         printf("Enter details of employee.");
-        gotoxy(10,7);
+        
         printf("Enter Name : ");
 //        gets(std.name);///???
-        gets(std.name);
-        gotoxy(10,8);
+        scanf("%s",std.name);
+        
         printf("Enter Mobile Number : ");
-        gets(std.mobile);
-        gotoxy(10,9);
+        scanf("%s",std.mobile);
+        
         printf("Enter employee id no : ");
         scanf("%d",&std.rollno);
         fflush(stdin);
-        gotoxy(10,10);
+        
         printf("Enter Designation : ");
 //        gets(std.course);///???
-        gets(std.course);
-        gotoxy(10,11);
+        scanf("%s",std.course);
+        
         printf("Enter Branch : ");
-        gets(std.branch);
-//        gotoxy(10,12);
+        scanf("%s",std.branch);
+//        
 //        printf("Enter Father's Name : ");
 //        gets(std.fathername);
         fwrite(&std,sizeof(std),1,fp);
-        gotoxy(10,15);
+        
         printf("Want to add of another record? Then press 'y' else 'n'.");
         fflush(stdin);
 //        another = getch();///???
-        another = getch();
+        char a;
+        another = scanf("%c",&a);
         system("cls");
         fflush(stdin);
     }
     fclose(fp);
-    gotoxy(10,18);
+    
+    char b,c;
+    scanf("%c",&b);
     printf("Press any key to continue.");
-    getch();
+    scanf("%c",&c);
     menu();
 }
