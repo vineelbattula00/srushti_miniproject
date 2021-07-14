@@ -1,5 +1,7 @@
-TEST_PROJ_NAME = employee_record_system
+
+TEST_PROJ_NAME = GST_Calculator
 BUILD_DIR = Build
+CFLAGS = -Wall -g
 
 SRC = main.c\
       src/*.c
@@ -16,7 +18,7 @@ INC_TEST = -Iinc -Iunity
 OUTPUT = $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)
 
 TEST_SRC = src/*c\
-test/test.c\
+test/test_calculator_operations.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD_DIR)/Test_$(TEST_PROJ_NAME).$(EXEC)
@@ -45,8 +47,8 @@ clean :
 valgrind :
 	valgrind $(call FixPath,$(TEST_OUTPUT))
 
-coverageCheck:$(BUILD_DIR)
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(SRC) $(INC_TEST) -o $(OUTPUT)
+coverage:$(BUILD_DIR)
+	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(SRC) -I$(INC) -o $(OUTPUT)
 	./$(OUTPUT)
  
 test:$(BUILD_DIR)
