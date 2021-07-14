@@ -1,5 +1,5 @@
 
-TEST_PROJ_NAME = GST_Calculator
+TEST_PROJ_NAME = employee_record_system
 BUILD_DIR = Build
 CFLAGS = -Wall -g
 
@@ -18,7 +18,7 @@ INC_TEST = -Iinc -Iunity
 OUTPUT = $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)
 
 TEST_SRC = src/*c\
-test/test_calculator_operations.c\
+test/test.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD_DIR)/Test_$(TEST_PROJ_NAME).$(EXEC)
