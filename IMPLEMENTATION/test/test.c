@@ -10,13 +10,19 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 
+void test_trial(void);
 
 int main(void)
 {
     /* Initiate the Unity Test Framework */
     UNITY_BEGIN();
-
+RUN_TEST(test_trial);
 
     
     /* Close the Unity Test Framework */
     return UNITY_END();
+}
+void test_trial(void)
+{
+    TEST_PASS();
+}
