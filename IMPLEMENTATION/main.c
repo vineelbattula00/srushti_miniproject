@@ -1,3 +1,4 @@
+
 #include"fun.h"
 #include<stdio.h>
 #include<conio.h>

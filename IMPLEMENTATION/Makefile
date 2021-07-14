@@ -16,7 +16,7 @@ INC_TEST = -Iinc -Iunity
 OUTPUT = $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)
 
 TEST_SRC = src/*c\
-test/test_Employee Record System.c\
+test/test.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD_DIR)/Test_$(TEST_PROJ_NAME).$(EXEC)
