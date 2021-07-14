@@ -3,7 +3,7 @@
 #include <fun.h>
 
 /* Modify these two lines according to the project */
-#define PROJECT_NAME    "Employee Record System"
+#define PROJECT_NAME    "employee_record_system"
 
 /* Required by the unity test framework */
 void setUp(){}
