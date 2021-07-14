@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install gcov 
-      run:  sudo apt -y install gcovr
+      run:  pip install gcov
     - name: make coverage
       run: make -C IMPLEMENTATION/ coverageCheck
     - name: GCov only
